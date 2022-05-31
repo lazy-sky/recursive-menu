@@ -5,13 +5,13 @@ import React, {
   useContext,
   useEffect
 } from "react";
-import api from "../api";
+import api, { TreeNode } from "../api";
 import { FileContext } from "../types";
 
 const Context = createContext({} as FileContext);
 
 const Provider: FC = ({ children }) => {
-  const [directoryTree, setDirectoryTree] = useState();
+  const [directoryTree, setDirectoryTree] = useState<TreeNode>();
 
   useEffect(() => {
     api
