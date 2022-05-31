@@ -11,7 +11,7 @@ import { FileContext } from "../types";
 const Context = createContext({} as FileContext);
 
 const Provider: FC = ({ children }) => {
-  const [directoryTree, setDirectoryTree] = useState<TreeNode>();
+  const [directoryTree, setDirectoryTree] = useState<TreeNode>({} as TreeNode);
 
   useEffect(() => {
     api
