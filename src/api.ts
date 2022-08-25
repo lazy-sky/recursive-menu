@@ -11,7 +11,7 @@ export interface TreeNode {
 }
 
 // State
-let directoryTree: TreeNode = {
+export let directoryTree: TreeNode = {
   id: "0eab8660-3735-4cde-af38-3724536fb409",
   type: "project",
   name: "my project",
@@ -151,7 +151,7 @@ let directoryTree: TreeNode = {
 
 // Helpers
 // Finds a node by ID and applies a mutation to it
-const deleteById = (node: TreeNode, id: string): TreeNode => {
+export const deleteById = (node: TreeNode, id: string): TreeNode => {
   if (node.children) {
     return {
       ...node,
@@ -165,13 +165,4 @@ const deleteById = (node: TreeNode, id: string): TreeNode => {
     };
   }
   return node;
-};
-
-// Exports
-export default {
-  getDirectoryTree: async () => directoryTree,
-  deleteById: async (id: string) => {
-    directoryTree = deleteById(directoryTree, id);
-    return directoryTree;
-  },
 };
