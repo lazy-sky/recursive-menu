@@ -5,7 +5,7 @@
   padding: 4px 20px;
 }
 
-.menuItem .toggleBtn {
+.menuItem .folder, .file {
   display: flex;
   align-items: center;
   gap: 4px;
